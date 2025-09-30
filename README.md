@@ -1,6 +1,6 @@
 # Brick Game
 
-![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Build](https://img.shields.io/badge/build-make-green.svg)
 ![SQLite](https://img.shields.io/badge/db-sqlite3-lightgrey.svg)
 
