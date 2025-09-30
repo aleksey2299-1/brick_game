@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/I.png</file>
+        <file>icons/J.png</file>
+        <file>icons/L.png</file>
+        <file>icons/O.png</file>
+        <file>icons/S.png</file>
+        <file>icons/T.png</file>
+        <file>icons/Z.png</file>
+        <file>style.css</file>
+        <file>BrickGame.jpeg</file>
+    </qresource>
+</RCC>

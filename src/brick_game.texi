@@ -1,0 +1,147 @@
+\input texinfo
+@c -*-texinfo-*-
+@setfilename brick_game.info
+@settitle Brick Game Documentation
+
+@titlepage
+@center @titlefont{Brick Game Documentation}
+@center Version 3.0
+@end titlepage
+
+@contents
+
+@chapter Project Overview
+
+@code{Brick Game} is a project that includes three classic games: @strong{Tetris}, @strong{Snake} and @strong{Race}.  
+It provides three user interfaces: a terminal-based CLI, a graphical desktop application and a web application.  
+High scores are saved between sessions using an embedded @strong{SQLite3} database.
+
+@chapter Project Structure
+
+@itemize
+@item @code{brick_game} — core backend.
+@itemize
+@item @code{tetris} — Tetris backend library.
+@item @code{snake} — Snake backend library.
+@item @code{race} — Race backend library.
+@item @code{server} — server backend.
+@item @code{web_gui} — server frontend.
+@end itemize
+@item @code{gui} — user interface implementations:
+@itemize
+@item @code{cli} — terminal interface.
+@item @code{desktop} — graphical desktop interface.
+@end itemize
+@item @code{headers} — API headers for backend libraries.
+@item @code{tests} — unit tests for tetris and snake backend libraries.
+@end itemize
+
+@chapter Controls
+
+@section Common Keys
+@itemize
+@item @kbd{P} — pause the game.
+@item @kbd{SPACE} — stop the game.
+@item @kbd{R} — start or restart the game after losing.
+@end itemize
+
+@section Tetris Controls
+@itemize
+@item @kbd{Left}, @kbd{Right}, @kbd{Down} — move the piece.
+@item @kbd{E} — rotate the piece.
+@end itemize
+
+@section Snake Controls
+@itemize
+@item @kbd{Left}, @kbd{Right} — change direction.
+@item @kbd{E} — speed up.
+@end itemize
+
+@section Race Controls
+@itemize
+@item @kbd{Left}, @kbd{Right} — change lines.
+@item @kbd{Up} — speed up.
+@end itemize
+
+@chapter Level Mechanics
+
+Maximum level: @strong{10}.
+
+@section Level Increase Rules
+@itemize
+@item In Tetris, the level increases every @strong{500} points.
+@item In Snake, the level increases every @strong{5} points.
+@item In Race, the level increases every @strong{5} points.
+@end itemize
+
+@chapter Scoring
+
+@section Tetris Scoring
+@itemize
+@item 1 line — 100 points
+@item 2 lines — 300 points
+@item 3 lines — 700 points
+@item 4 lines — 1500 points
+@end itemize
+
+@section Snake Scoring
+@itemize
+@item 1 apple — 1 point
+@item Game is won when the score reaches @strong{200}.
+@end itemize
+
+@section Race Scoring
+@itemize
+@item 1 rival — 1 point
+@end itemize
+
+@chapter Build System
+
+The project uses a @code{Makefile} to automate compilation and testing.
+
+@section Key Makefile Targets
+
+@table @code
+@item all
+Builds and installs all binaries.
+
+@item install
+Installs CLI, desktop and web versions of the games to @code{~/brick_game}.
+
+@item install_cli / install_desktop / install_web
+Installs only CLI / desktop / web versions.
+
+@item test
+Runs unit tests for Tetris, Snake and Race.
+
+@item gcov_report
+Generates a full code coverage report (HTML) using lcov and genhtml.
+
+@item clean
+Removes all compiled files and binaries.
+
+@item dist
+Creates a compressed archive of the project source code.
+
+@item install_lib
+Installs required development libraries (GCC, SQLite3, ncurses, etc).
+
+@item install_qt
+Installs Qt dependencies for the desktop version.
+
+@item install_dvi
+Installs LaTeX tools to build this documentation.
+@end table
+
+@node License
+@chapter License
+
+The project is licensed under the GNU GPL v3.  
+Documentation is licensed under the GNU FDL.
+
+@node Contacts
+@chapter Contacts
+
+Authors: jennispo@*
+
+@bye

@@ -1,0 +1,43 @@
+.btn-primary {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  min-width: 50px;
+  min-height: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+}
+
+.info {
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-main {
+  background-color: #f9ffa4;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.btn-main:hover {
+  background-color: #c9ce85;
+}
+
+.field {
+  border-radius: 10px;
+  background-color: rgba(220, 222, 250, 0.568);
+}
+
+.next {
+  border-radius: 10px;
+  background-color: rgb(211, 255, 174);
+}
+
+.game-page {
+  background-color: #f8d791;
+}
